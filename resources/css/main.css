@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#header {
+    background-color: #01579B;
+    -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.67);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.67);
+}
+
+#header > div {
+    padding: 15px;
+}
+
+#header-logo {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#header-logo:hover {
+    text-decoration: none;
+}
+
+#header-logo .glyphicon {
+    font-size: 32px;
+    position: relative;
+    display: inline-block;
+    margin-top: -14px;
+    top: 7px;
+    margin-right: 4px;
+}
+
+.movie {
+    padding: 15px;
+    text-align: left;
+}
+
+.movie h1 {
+    margin: 8px;
+    font-size: 28px;
+}
+
+.movie p {
+    text-align: justify;
+}
+
+.movie .movie-poster {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-right: 16px;
+    border: solid 1px #000000;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.movie .movie-watch-button {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #00695C;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.movie .movie-watch-button .glyphicon {
+    position: relative;
+    top: 6px;
+    left: 0;
+    font-size: 24px;
+    padding-right: 2px;
+    -webkit-transition: padding-right 0.3s ease-in-out, left 0.3s ease-in-out;
+    -moz-transition: padding-right 0.3s ease-in-out, left 0.3s ease-in-out;
+    -ms-transition: padding-right 0.3s ease-in-out, left 0.3s ease-in-out;
+    -o-transition: padding-right 0.3s ease-in-out, left 0.3s ease-in-out;
+    transition: padding-right 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.movie .movie-watch-button:hover {
+    text-decoration: none;
+    color: #009688;
+}
+
+.movie .movie-watch-button:hover .glyphicon {
+    padding-right: 8px;
+    left: 4px;
+}
+
+#popup-frame {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: none;
+    opacity: 0;
+    overflow: auto;
+}
+
+#popup-frame.show {
+    top: 0;
+    display: block;
+    opacity: 1;
+    animation: popup-frame-show-animation 0.5s ease-in-out;
+}
+
+@keyframes popup-frame-show-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#popup-container {
+    background-color: #f4f4f4;
+    position: relative;
+    width: 640px;
+    height: 480px;
+    top: 80px;
+    left: 50vw;
+    margin-bottom: 50px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#popup-content-container {
+    width: inherit;
+    height: inherit;
+}
+
+#popup-content-container iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+#popup-container .glyphicon-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    color: #FFEBEE;
+    background-color: #E53935;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#popup-container .glyphicon-remove:hover {
+    text-decoration: none;
+    background-color: #F44336;
+}
+
+#popup-container .glyphicon-remove:active {
+    text-decoration: none;
+    background-color: #C62828;
+}
+
+/*
+Fixes responsiveness issue with the every 3n+1 movie showing alone in the row for lg breakpoint devices.
+Same for 2n+1 movie with md and sm breakpoint devices.
+*/
+
+@media (min-width: 768px) {
+    .movie:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media (min-width: 992px) {
+    .movie:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media (min-width: 1200px) {
+    .movie:nth-child(2n+1) {
+        clear: none;
+    }
+
+    .movie:nth-child(3n+1) {
+        clear: both;
+    }
+}
