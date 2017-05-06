@@ -27,16 +27,16 @@ class Movie:
 
     @staticmethod
     def initialize_from_title(title, traileraddict_trailer_type="trailer"):
-        print("Requesting information for the movie '" + title + "' from IMDB...")
-        # Make API request to IMDB to get movie information.
-        imdb_api_connection = urllib.request.urlopen("http://www.omdbapi.com/?t=" + urllib.parse.quote(title))
-        imdb_api_response = imdb_api_connection.read()
-        imdb_api_connection.close()
+        print("Requesting information for the movie '" + title + "' from omdb...")
+        # Make API request to omdb to get movie information.
+        omdb_api_connection = urllib.request.urlopen("http://www.omdbapi.com/?t=" + urllib.parse.quote(title))
+        omdb_api_response = omdb_api_connection.read()
+        omdb_api_connection.close()
         # http.client.HTTPResponse.read() returns raw bytes which is needed to be converted
         # to string using UTF-8 encoding.
-        imdb_movie_data = json.loads(imdb_api_response.decode("utf-8"))
+        omdb_movie_data = json.loads(omdb_api_response.decode("utf-8"))
         # Check whether the movie was found or not.
-        if imdb_movie_data["Response"] == "True":
+        if omdb_movie_data["Response"] == "True":
             print("Movie information found successfully!")
             print("Requesting trailer for the movie '" + title + "' from Trailer Addict...")
             # Make API request to Trailer Addict to get movie trailer.
@@ -53,7 +53,7 @@ class Movie:
             # the movie trailer URL from the src attribute of the iframe element.
             trailer_url = eT.fromstring(traileraddict_xml_root[0].find("embed_standard").text).attrib["src"]
             print("Movie trailer found successfully!")
-            movie = Movie(title, imdb_movie_data["Plot"], imdb_movie_data["Poster"], trailer_url)
+            movie = Movie(title, omdb_movie_data["Plot"], omdb_movie_data["Poster"], trailer_url)
             return movie
         else:
             print("Movie not found!")

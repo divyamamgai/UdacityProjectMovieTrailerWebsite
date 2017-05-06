@@ -1,20 +1,21 @@
 # Fresh Tomatoes
 
-A movies trailer website buildable using Python.
+A movies trailer website buildable using Python which utilizes [OMDB](http://www.omdbapi.com/) and
+[Trailer Addict](http://www.traileraddict.com/trailerapi) APIs.
 
 ### How to build?
 
 Run the following command -
 ```sh
-$ python .\entertainment_center.py
+$ python .\build.py
 ```
 
-> **Note** : Internet connection is required to build the website by default since it uses IMDB and
+> **Note**: Internet connection is required to build the website by default since it uses OMDB and
 > Trailer Addict APIs to retrieve movie details.
 
 ### How to run?
 
-Open the `index.html` in the browser after you have completed the build process successfuly.
+Open the `index.html` in the browser after you have completed the build process successfully.
 
 ### Where to modify the movies?
 
