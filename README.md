@@ -9,6 +9,10 @@ Run the following command -
 $ python .\entertainment_center.py
 ```
 
+### How to run?
+
+Open the `index.html` in the browser after you have completed the build process successfuly.
+
 ### Where to modify the movies?
 
 The movies being displayed on the website are initialized in the `entertainment_center.py` as the `media.Movie` objects.
