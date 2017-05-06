@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
 }
 
 #header {
@@ -18,9 +19,10 @@ body {
 #header-logo {
     color: #ffffff;
     font-size: 20px;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
-#header-logo:hover {
+#header-logo:hover, #header-logo:active {
     text-decoration: none;
 }
 
@@ -40,7 +42,9 @@ body {
 
 .movie h1 {
     margin: 8px;
-    font-size: 28px;
+    font-size: 24px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .movie p {
@@ -53,9 +57,9 @@ body {
     float: left;
     margin-right: 16px;
     border: solid 1px #000000;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -129,7 +133,7 @@ body {
     background-color: #f4f4f4;
     position: relative;
     width: 640px;
-    height: 480px;
+    height: 360px;
     top: 80px;
     left: 50vw;
     margin-bottom: 50px;

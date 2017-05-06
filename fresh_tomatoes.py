@@ -18,9 +18,9 @@ def create_movie_container_content(movies):
         # Append the movie information in the movie_template_content and add it to the movie_container_content.
         movie_container_content += movie_template_content.format(
             movie_title=movie.title,
-            movie_story_line=movie.storyline,
-            movie_poster=movie.poster,
-            movie_trailer_youtube_id=movie.generate_trailer_youtube_id()
+            movie_plot=movie.plot,
+            movie_poster_url=movie.poster_url,
+            movie_trailer_url=movie.trailer_url
         )
     return movie_container_content
 
