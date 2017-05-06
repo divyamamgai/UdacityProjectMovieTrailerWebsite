@@ -9,9 +9,8 @@ Run the following command -
 $ python .\entertainment_center.py
 ```
 
-> **Note**
-> Internet connection is required to build the website by default since it uses IMDB and Trailer Addict APIs to
-> retrieve movie details.
+> **Note** : Internet connection is required to build the website by default since it uses IMDB and
+> Trailer Addict APIs to retrieve movie details.
 
 ### How to run?
 
