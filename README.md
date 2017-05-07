@@ -3,6 +3,16 @@
 A movies trailer website buildable using Python which utilizes [OMDB](http://www.omdbapi.com/) and
 [Trailer Addict](http://www.traileraddict.com/trailerapi) APIs.
 
+### Dependencies
+
+1. Python3 (Tested with Python 3.5.2)
+2. Bash or CMD
+
+##### Optional
+
+1. PyCharm
+..* YUI Compressor for JS and CSS
+
 ### How to build?
 
 Run the following command -
