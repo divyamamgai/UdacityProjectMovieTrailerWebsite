@@ -11,7 +11,7 @@ A movies trailer website buildable using Python which utilizes [OMDB](http://www
 ##### Optional
 
 1. PyCharm
-..* YUI Compressor for JS and CSS
+  * YUI Compressor for JS and CSS
 
 ### How to build?
 
